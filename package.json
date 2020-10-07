@@ -1,0 +1,67 @@
+{
+  "name": "near-redpacket",
+  "version": "0.1.0",
+  "license": "(MIT AND Apache-2.0)",
+  "scripts": {
+    "build": "npm run build:web",
+    "build:web": "parcel build src/index.html --public-url ./",
+    "start": "parcel src/index.html",
+    "dev": "nodemon --watch assembly -e ts --exec \"npm run start\""
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.5",
+    "@babel/preset-react": "^7.9.4",
+    "babel-jest": "^26.0.0",
+    "env-cmd": "^10.1.0",
+    "gh-pages": "^2.2.0",
+    "gulp": "latest",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-csscomb": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "jest": "^26.0.0",
+    "jest-environment-node": "^26.0.1",
+    "near-shell": "^0.24.1",
+    "nodemon": "^2.0.3",
+    "parcel-bundler": "^1.12.4",
+    "react-test-renderer": "^16.13.1",
+    "sass": "^1.26.10",
+    "shelljs": "^0.8.4"
+  },
+  "dependencies": {
+    "big.js": "^5.2.2",
+    "clipboard-polyfill": "^3.0.1",
+    "near-api-js": "^0.29.1",
+    "near-bindgen-as": "^1.2.3",
+    "near-sdk-bindgen": "^2.0.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "regenerator-runtime": "^0.13.7"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/src/__mocks__/fileMock.js"
+    },
+    "setupFiles": [
+      "<rootDir>/src/jest.init.js"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

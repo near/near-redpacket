@@ -1,0 +1,38 @@
+// Dropdown
+.dropdown {
+  display: inline-block;
+  position: relative;
+
+  .menu {
+    animation: slide-down .15s ease 1;
+    display: none;
+    left: 0;
+    max-height: 50vh;
+    overflow-y: auto;
+    position: absolute;
+    top: 90%;
+  }
+
+  &.dropdown-right {
+    .menu {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  &:focus .menu,
+  &:hover .menu,
+  &.active .menu,
+  .dropdown-toggle:focus + .menu,
+  .menu:hover {
+    display: block;
+  }
+
+  // Fix dropdown-toggle border radius in button groups
+  .btn-group {
+    .dropdown-toggle:nth-last-child(2) {
+      border-bottom-right-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+  }
+}

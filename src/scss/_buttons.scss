@@ -1,0 +1,219 @@
+// Buttons
+.btn {
+  align-items: center;
+  appearance: none;
+  background: $bg-color-dark;
+  border: $border-width solid $border-color-light;
+  border-radius: 10rem;
+  box-shadow: 0 .1rem 1rem rgba($dark-color, .1);
+  color: $gray-color-dark;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: $font-size;
+  height: $control-size;
+  line-height: $line-height;
+  outline: none;
+  padding: $control-padding-y $control-padding-x;
+  text-align: center;
+  text-decoration: none;
+  transition: background .2s, border .2s, box-shadow .2s, color .2s;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  &:visited {
+    color: $gray-color-dark;
+  }
+  &:focus {
+    @include control-shadow();
+  }
+  &:focus,
+  &:hover {
+    background: $primary-color;
+    border-color: $primary-color-dark;
+    color: $light-color;
+    text-decoration: none;
+  }
+  &:active,
+  &.active {
+    background: $primary-color-dark;
+    border-color: darken($primary-color-dark, 5%);
+    color: $light-color;
+    text-decoration: none;
+    &.loading {
+      &::after {
+        border-bottom-color: $light-color;
+        border-left-color: $light-color;
+      }
+    }
+  }
+  &[disabled],
+  &:disabled,
+  &.disabled {
+    cursor: default;
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  // Button Primary
+  &.btn-primary {
+    background: $primary-color;
+    border-color: $primary-color-dark;
+    box-shadow: 0 .1rem 1rem rgba($primary-color, .25);
+    color: $light-color;
+    &:visited {
+      color: $light-color;
+    }
+    &:focus,
+    &:hover {
+      background: darken($primary-color-dark, 2%);
+      border-color: darken($primary-color-dark, 5%);
+      color: $light-color;
+    }
+    &:active,
+    &.active {
+      background: darken($primary-color-dark, 4%);
+      border-color: darken($primary-color-dark, 7%);
+      color: $light-color;
+    }
+    &.loading {
+      &::after {
+        border-bottom-color: $light-color;
+        border-left-color: $light-color;
+      }
+    }
+  }
+
+  // Button Gold
+  &.btn-gold {
+    background: darken($gold-color, 55%);
+    border-color: darken($gold-color, 58%);
+    box-shadow: 0 .2rem 1rem rgba(darken($gold-color, 55%), .5);
+    color: lighten($gold-color, 15%);
+    &:visited {
+      color: lighten($gold-color, 15%);
+    }
+    &:focus,
+    &:hover,
+    &:active,
+    &.active {
+      background: darken($gold-color, 58%);
+      border-color: darken($gold-color, 61%);
+      color: lighten($gold-color, 15%);
+    }
+  }
+
+  // Button Link
+  &.btn-link {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: $link-color;
+    &:visited,
+    &:focus,
+    &:hover,
+    &:active,
+    &.active {
+      color: $link-color-dark;
+    }
+  }
+
+  // Button Sizes
+  &.btn-sm {
+    font-size: $font-size-sm;
+    height: $control-size-sm;
+    padding: $control-padding-y-sm $control-padding-x-sm;
+  }
+
+  &.btn-lg {
+    height: $control-size-lg;
+    padding: $control-padding-y-lg $control-padding-x-lg;
+  }
+
+  // Button Block
+  &.btn-block {
+    display: block;
+    width: 100%;
+  }
+
+  // Button Block
+  &.btn-rounded {
+    border-radius: 10rem;
+  }
+
+  // Button Action
+  &.btn-action {
+    width: $control-size;
+    padding-left: 0;
+    padding-right: 0;
+
+    &.btn-sm {
+      width: $control-size-sm;
+    }
+
+    &.btn-lg {
+      width: $control-size-lg;
+    }
+  }
+
+  // Button Clear
+  &.btn-clear {
+    background: transparent;
+    border: 0;
+    color: currentColor;
+    height: $unit-5;
+    line-height: $unit-4;
+    margin-left: $unit-1;
+    margin-right: -2px;
+    opacity: 1;
+    padding: $unit-h;
+    text-decoration: none;
+    width: $unit-5;
+
+    &:focus,
+    &:hover {
+      background: rgba($bg-color, .5);
+      opacity: .95;
+    }
+
+    &::before {
+      content: "\2715";
+    }
+  }
+}
+
+// Button groups
+.btn-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  .btn {
+    flex: 1 0 auto;
+    &:first-child:not(:last-child) {
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+    &:not(:first-child):not(:last-child) {
+      border-radius: 0;
+      margin-left: -$border-width;
+    }
+    &:last-child:not(:first-child) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
+      margin-left: -$border-width;
+    }
+    &:focus,
+    &:hover,
+    &:active,
+    &.active {
+      z-index: $zindex-0;
+    }
+  }
+
+  &.btn-group-block {
+    display: flex;
+
+    .btn {
+      flex: 1 0 0;
+    }
+  }
+}

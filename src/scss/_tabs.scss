@@ -1,0 +1,32 @@
+// Tabs
+.tab {
+  align-items: center;
+  border-bottom: $border-width solid transparent;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: $unit-1 0 ($unit-1 - $border-width) 0;
+
+  .tab-item {
+    border-bottom: $border-width-lg solid transparent;
+    color: $gray-color;
+    cursor: pointer;
+    display: block;
+    font-size: .8rem;
+    margin: 0 $unit-2;
+    padding: $unit-2 $unit-1 $unit-2 - $border-width-lg $unit-1;
+    text-align: center;
+    text-decoration: none;
+    width: 4rem;
+    &:focus,
+    &:hover {
+      color: $gray-color-dark;
+    }
+
+    &.active {
+      border-bottom-color: $dark-color;
+      color: $dark-color;
+      font-weight: 700;
+    }
+  }
+}
