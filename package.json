@@ -5,6 +5,7 @@
   "scripts": {
     "build": "npm run build:web",
     "build:web": "parcel build src/index.html --public-url ./",
+    "deploy": "gh-pages -d dist",
     "start": "parcel src/index.html",
     "dev": "nodemon --watch assembly -e ts --exec \"npm run start\""
   },
@@ -13,7 +14,7 @@
     "@babel/preset-react": "^7.9.4",
     "babel-jest": "^26.0.0",
     "env-cmd": "^10.1.0",
-    "gh-pages": "^2.2.0",
+    "gh-pages": "^3.1.0",
     "gulp": "latest",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean-css": "^4.2.0",
