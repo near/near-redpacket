@@ -56629,7 +56629,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-const history = (0, _history.createBrowserHistory)(); // Initializing contract
+const history = (0, _history.createBrowserHistory)({
+  basename: undefined
+}); // Initializing contract
 
 async function initContract() {
   window.nearConfig = (0, _config.default)("development" || 'development');
@@ -56716,7 +56718,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56933" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60957" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
