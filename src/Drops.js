@@ -97,7 +97,7 @@ const Drops = (props) => {
     ********************************/
     async function getWalletLink(public_key) {
         const { secretKey } = await getDrop(public_key)
-        return `${window.location.origin}/re/${secretKey}`
+        return `${window.location.origin}/${secretKey}`
     }
     /********************************
     Download keypair
