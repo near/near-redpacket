@@ -2388,6 +2388,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .empty .empty-icon {
+  font-size: 3rem;
   margin-bottom: .8rem;
 }
 

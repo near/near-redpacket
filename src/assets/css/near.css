@@ -2388,6 +2388,7 @@ summary.accordion-header::-webkit-details-marker {
 }
 
 .empty .empty-icon {
+  font-size: 3rem;
   margin-bottom: .8rem;
 }
 
@@ -3905,23 +3906,23 @@ body {
   height: 1.6rem;
 }
 
-.near-container .near-dapp-header .near-user .dropdown {
+.near-container .near-user .dropdown {
   height: 2rem;
 }
 
-.near-container .near-dapp-header .near-user .btn {
+.near-container .near-user .btn {
   max-width: 40vw;
   padding: 0 .5rem 0 0;
 }
 
-.near-container .near-dapp-header .near-user .btn:focus,
-.near-container .near-dapp-header .near-user .btn:hover {
+.near-container .near-user .btn:focus,
+.near-container .near-user .btn:hover {
   background: #f0f0f0;
   border-color: #eaeaea;
   color: #7d7d7d;
 }
 
-.near-container .near-dapp-header .near-user .btn-icon {
+.near-container .near-user .btn-icon {
   background: white;
   border-radius: 50%;
   height: 1.6rem;

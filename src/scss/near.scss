@@ -85,32 +85,32 @@ body {
     .near-logo {
       height: 1.6rem;
     }
+  }
 
-    .near-user {
-      .dropdown {
-        height: 2rem;
+  .near-user {
+    .dropdown {
+      height: 2rem;
+    }
+
+    .btn {
+      max-width: 40vw;
+      padding: 0 .5rem 0 0;
+
+      &:focus,
+      &:hover {
+        background: $bg-color-dark;
+        border-color: $border-color-light;
+        color: $gray-color-dark;
       }
+    }
 
-      .btn {
-        max-width: 40vw;
-        padding: 0 .5rem 0 0;
-
-        &:focus,
-        &:hover {
-          background: $bg-color-dark;
-          border-color: $border-color-light;
-          color: $gray-color-dark;
-        }
-      }
-
-      .btn-icon {
-        background: $bg-color-light;
-        border-radius: 50%;
-        height: 1.6rem;
-        margin: 0 .25rem 0 .05rem;
-        padding: .3rem;
-        width: 1.6rem;
-      }
+    .btn-icon {
+      background: $bg-color-light;
+      border-radius: 50%;
+      height: 1.6rem;
+      margin: 0 .25rem 0 .05rem;
+      padding: .3rem;
+      width: 1.6rem;
     }
   }
 

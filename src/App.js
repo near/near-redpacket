@@ -39,7 +39,7 @@ class App extends Component {
   }
 
   async requestSignIn() {
-    const appTitle = 'NEAR Red Envelope';
+    const appTitle = 'NEAR Redpacket';
     await this.props.wallet.requestSignIn(
       window.nearConfig.contractName,
       appTitle
@@ -87,29 +87,47 @@ class App extends Component {
             </div>
             <div className="near-user">
               {this.state.login ? 
-                  <div className="dropdown" tabIndex="0">
+                  <div className="dropdown dropdown-right" tabIndex="0">
                       <div className="btn">
-                          <img className="btn-icon" src={iconUser} alt="NEAR user" height="40" />
-                          <span className="text-ellipsis">{currentUser.account_id}</span>
+                        <img className="btn-icon" src={iconUser} alt="NEAR user" height="40" />
+                        <span className="text-ellipsis">{currentUser.account_id}</span>
                       </div>
                       <ul className="menu">
-                          <li className="menu-item">
-                              <a href="#" onClick={this.requestSignOut}>
-                                  Log Out
-                              </a>
-                          </li>
+                        <li className="menu-item">
+                          <a href={window.nearConfig.walletUrl} target="_blank">
+                              NEAR Wallet
+                          </a>
+                        </li>
+                        <li className="menu-item">
+                          <a href="#" onClick={this.requestSignOut}>
+                              Log Out
+                          </a>
+                        </li>
                       </ul>
                   </div>
-                  : <a className="btn" href="#" onClick={this.requestSignIn}>
-                      <img className="btn-icon" src={iconUser} alt="NEAR user" height="40" />
-                      <span className="text-ellipsis">Log in with NEAR</span>
-                  </a>
+                  : <></>
               }
             </div>
           </div>
           <div className="near-dapp-body">
             <div>
-              { currentUser && <Drops {...{currentUser, updateUser}} />}
+              { currentUser ? 
+                <Drops {...{currentUser, updateUser}} />
+                : 
+                <div className="empty">
+                    <div className="empty-icon">🧧</div>
+                    <p className="empty-title h5">NEAR 红包</p>
+                    <p className="empty-subtitle">点击按钮登录 NEAR 并可发送红包。</p>
+                    <div className="empty-action">
+                      <div className="near-user">
+                        <a className="btn" href="#" onClick={this.requestSignIn}>
+                          <img className="btn-icon" src={iconUser} alt="NEAR user" height="40" />
+                          <span className="text-ellipsis">Log in with NEAR</span>
+                        </a>
+                      </div>
+                    </div>
+                </div>
+              }
             </div>
           </div>
         </div>

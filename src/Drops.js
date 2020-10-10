@@ -228,17 +228,28 @@ const Drops = (props) => {
             { !showUsed && 
                 <div className="near-drops">
                     {
-                        activeDrops.map(({ public_key, amount, ts, walletLink }) => 
-                        <div className="near-drop-item" key={public_key}>
-                            <div className="drop-item-funds">{nearTo(amount, 2)} <small>Ⓝ</small></div>
-                            <div className="drop-item-status">Active</div>
-                            <div className="drop-item-pubkey text-ellipsis text-gray">Public Key: {public_key}</div>
-                            <button className="btn btn-sm btn-primary" onClick={async () => {
-                                await clipboard.writeText(walletLink)
-                                alert('NEAR 红包 🧧 链接已复制')
-                            }}>Share Link</button>
-                            <button className="btn btn-sm btn-link" onClick={() => reclaimDrop(public_key)}>Use Drop</button>
-                        </div>)
+                        activeDrops.length > 0 ? 
+                        <div className="drop">
+                        {
+                            activeDrops.map(({ public_key, amount, ts, walletLink }) => 
+                            <div className="near-drop-item" key={public_key}>
+                                <div className="drop-item-funds">{nearTo(amount, 2)} <small>Ⓝ</small></div>
+                                <div className="drop-item-status">Active</div>
+                                <div className="drop-item-pubkey text-ellipsis text-gray">Public Key: {public_key}</div>
+                                <button className="btn btn-sm btn-primary" onClick={async () => {
+                                    await clipboard.writeText(walletLink)
+                                    alert('NEAR 红包 🧧 链接已复制')
+                                }}>Share Link</button>
+                                <button className="btn btn-sm btn-link" onClick={() => reclaimDrop(public_key)}>Use Drop</button>
+                            </div>)
+                        }
+                        </div>
+                        : 
+                        <div className="empty">
+                            <div className="empty-icon">🧧</div>
+                            <p className="empty-title h5">无可领取红包</p>
+                            <p className="empty-subtitle">点击上方按钮发送新 NEAR 红包。</p>
+                        </div>
                     }
                 </div>
             }
@@ -260,7 +271,13 @@ const Drops = (props) => {
                                 <button className="btn btn-sm btn-link" onClick={() => removeDrop(public_key)}>Remove Drop</button>
                             </div>)
                         }
-                        </div> : <h3>No Used Drops</h3>
+                        </div>
+                        : 
+                        <div className="empty">
+                            <div className="empty-icon">🧧</div>
+                            <p className="empty-title h5">无已领取的红包</p>
+                            <p className="empty-subtitle">点击上方按钮发送新 NEAR 红包。</p>
+                        </div>
                     }
                 </>
             }

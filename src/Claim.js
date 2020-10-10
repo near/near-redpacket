@@ -86,7 +86,7 @@ class Claim extends Component {
                 { status ?
                   <div className="h1">{nearTo(amount, 2)}<small>Ⓝ</small></div>
                   :
-                  <div className="h1">已被领取</div>
+                  <div className="h1">已领取</div>
                 }
               </div>
               <div className="redpacket-card-footer">
