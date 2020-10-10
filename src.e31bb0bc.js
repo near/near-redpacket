@@ -55983,7 +55983,7 @@ const Drops = props => {
     const {
       secretKey
     } = await getDrop(public_key);
-    return `${window.location.origin}/${secretKey}`;
+    return `${window.location.origin}/#/${secretKey}`;
   }
   /********************************
   Download keypair
@@ -56150,7 +56150,7 @@ const Drops = props => {
     className: "btn btn-sm btn-primary",
     onClick: async () => {
       await clipboard.writeText(walletLink);
-      alert('NEAR 红包 🧧 链接已复制');
+      alert('🧧 NEAR Redpacket link copied.');
     }
   }, "Share Link"), /*#__PURE__*/_react.default.createElement("button", {
     className: "btn btn-sm btn-link",
@@ -56161,9 +56161,9 @@ const Drops = props => {
     className: "empty-icon"
   }, "\uD83E\uDDE7"), /*#__PURE__*/_react.default.createElement("p", {
     className: "empty-title h5"
-  }, "\u65E0\u53EF\u9886\u53D6\u7EA2\u5305"), /*#__PURE__*/_react.default.createElement("p", {
+  }, "No Available Redpackets"), /*#__PURE__*/_react.default.createElement("p", {
     className: "empty-subtitle"
-  }, "\u70B9\u51FB\u4E0A\u65B9\u6309\u94AE\u53D1\u9001\u65B0 NEAR \u7EA2\u5305\u3002"))), showUsed && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, usedDrops.length > 0 ? /*#__PURE__*/_react.default.createElement("div", {
+  }, "Click the button to create a new NEAR redpacket."))), showUsed && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, usedDrops.length > 0 ? /*#__PURE__*/_react.default.createElement("div", {
     className: "drop"
   }, usedDrops.map(({
     public_key,
@@ -56183,7 +56183,7 @@ const Drops = props => {
     className: "btn btn-sm btn-primary",
     onClick: async () => {
       await clipboard.writeText(walletLink);
-      alert('NEAR 红包 🧧 链接已复制');
+      alert('🧧 NEAR Redpacket link copied.');
     }
   }, "Share Link"), /*#__PURE__*/_react.default.createElement("button", {
     className: "btn btn-sm btn-link",
@@ -56194,9 +56194,9 @@ const Drops = props => {
     className: "empty-icon"
   }, "\uD83E\uDDE7"), /*#__PURE__*/_react.default.createElement("p", {
     className: "empty-title h5"
-  }, "\u65E0\u5DF2\u9886\u53D6\u7684\u7EA2\u5305"), /*#__PURE__*/_react.default.createElement("p", {
+  }, "No Claimed Redpackets"), /*#__PURE__*/_react.default.createElement("p", {
     className: "empty-subtitle"
-  }, "\u70B9\u51FB\u4E0A\u65B9\u6309\u94AE\u53D1\u9001\u65B0 NEAR \u7EA2\u5305\u3002"))));
+  }, "Click the button to create a new NEAR redpacket."))));
 };
 
 var _default = Drops;
@@ -56356,9 +56356,9 @@ class App extends _react.Component {
       className: "empty-icon"
     }, "\uD83E\uDDE7"), /*#__PURE__*/_react.default.createElement("p", {
       className: "empty-title h5"
-    }, "NEAR \u7EA2\u5305"), /*#__PURE__*/_react.default.createElement("p", {
+    }, "NEAR Redpackets"), /*#__PURE__*/_react.default.createElement("p", {
       className: "empty-subtitle"
-    }, "\u70B9\u51FB\u6309\u94AE\u767B\u5F55 NEAR \u5E76\u53EF\u53D1\u9001\u7EA2\u5305\u3002"), /*#__PURE__*/_react.default.createElement("div", {
+    }, "Login and Send NEAR Redpackets."), /*#__PURE__*/_react.default.createElement("div", {
       className: "empty-action"
     }, /*#__PURE__*/_react.default.createElement("div", {
       className: "near-user"
@@ -56373,7 +56373,7 @@ class App extends _react.Component {
       height: "40"
     }), /*#__PURE__*/_react.default.createElement("span", {
       className: "text-ellipsis"
-    }, "Log in with NEAR")))))))));
+    }, "Login with NEAR")))))))));
   }
 
 }
@@ -56629,9 +56629,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
-const history = (0, _history.createBrowserHistory)({
-  basename: undefined
-}); // Initializing contract
+const history = (0, _history.createHashHistory)(); // Initializing contract
 
 async function initContract() {
   window.nearConfig = (0, _config.default)("development" || 'development');
@@ -56718,7 +56716,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60957" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50818" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
