@@ -198,7 +198,7 @@ body {
     padding: 0;
 
     .near-redpacket-header {
-      animation: re-slide-up 2.5s ease-in-out 1;
+      animation: re-slide-up 3s ease-in-out 1;
       background: linear-gradient(to bottom, darken($primary-color, 5%) 5%, darken($primary-color, 10%) 100%);
       flex: 1 1 65vh;
       height: 65vh;
@@ -237,7 +237,7 @@ body {
       }
   
       .redpacket-btn {
-        animation: re-flip-btn 2.5s ease-in-out 1;
+        animation: re-flip-btn 3s ease-in-out 1;
         align-items: center;
         background: linear-gradient(45deg, lighten($gold-color, 3%) 0, darken($gold-color-dark, 5%) 100%);
         border: .1rem solid rgba($dark-color, .1);
@@ -298,7 +298,7 @@ body {
       }
 
       .redpacket-card {
-        animation: re-slide-down 2.5s ease-in-out 1;
+        animation: re-slide-down 3s ease-in-out 1;
         background: linear-gradient(to bottom, darken($gold-color-dark, 3%) 0, darken($gold-color-dark, 8%) 100%);
         border: .1rem solid rgba($dark-color, .15);
         border-radius: .6rem;
@@ -373,11 +373,11 @@ body {
 
 @keyframes re-flip-btn {
   0% {
-    opacity: 100%;
+    opacity: 1;
     transform: rotateY(0);
   }
-  50% {
-    opacity: 100%;
+  75% {
+    opacity: 1;
   }
   100% {
     opacity: 0;

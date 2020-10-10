@@ -2382,7 +2382,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .empty {
   border-radius: .4rem;
-  color: #7d7d7d;
+  color: #2c2c2c;
   padding: 1.6rem 1.6rem; 
   text-align: center;
 }
@@ -4016,8 +4016,8 @@ body {
 }
 
 .near-container .near-dapp-redpacket .near-redpacket-header {
-  -webkit-animation: re-slide-up 2.5s ease-in-out 1;
-  animation: re-slide-up 2.5s ease-in-out 1;
+  -webkit-animation: re-slide-up 3s ease-in-out 1;
+  animation: re-slide-up 3s ease-in-out 1;
   background: linear-gradient(to bottom, #e03c36 5%, #da2822 100%);
   flex: 1 1 65vh;
   height: 65vh;
@@ -4058,8 +4058,8 @@ body {
 
 .near-container .near-dapp-redpacket .near-redpacket-header .redpacket-btn {
   align-items: center;
-  -webkit-animation: re-flip-btn 2.5s ease-in-out 1;
-  animation: re-flip-btn 2.5s ease-in-out 1;
+  -webkit-animation: re-flip-btn 3s ease-in-out 1;
+  animation: re-flip-btn 3s ease-in-out 1;
   background: linear-gradient(45deg, #f0ce99 0, #e9b768 100%);
   border: .1rem solid rgba(36, 36, 36, .1);
   border-radius: 50%;
@@ -4121,8 +4121,8 @@ body {
 }
 
 .near-container .near-dapp-redpacket .near-redpacket-body .redpacket-card {
-  -webkit-animation: re-slide-down 2.5s ease-in-out 1;
-  animation: re-slide-down 2.5s ease-in-out 1;
+  -webkit-animation: re-slide-down 3s ease-in-out 1;
+  animation: re-slide-down 3s ease-in-out 1;
   background: linear-gradient(to bottom, #eabb71 0, #e7b15b 100%);
   border: .1rem solid rgba(36, 36, 36, .15);
   border-radius: .6rem;
@@ -4194,11 +4194,11 @@ body {
 
 @-webkit-keyframes re-flip-btn {
   0% {
-    opacity: 100%;
+    opacity: 1;
     transform: rotateY(0);
   }
-  50% {
-    opacity: 100%;
+  75% {
+    opacity: 1;
   }
   100% {
     opacity: 0;
@@ -4208,11 +4208,11 @@ body {
 
 @keyframes re-flip-btn {
   0% {
-    opacity: 100%;
+    opacity: 1;
     transform: rotateY(0);
   }
-  50% {
-    opacity: 100%;
+  75% {
+    opacity: 1;
   }
   100% {
     opacity: 0;

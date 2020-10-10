@@ -1,7 +1,7 @@
 // Empty states (or Blank slates)
 .empty {
   border-radius: $border-radius;
-  color: $gray-color-dark;
+  color: lighten($dark-color, 3%);
   text-align: center;
   padding: $unit-8 $unit-8;
 

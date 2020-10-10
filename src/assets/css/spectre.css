@@ -2382,7 +2382,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .empty {
   border-radius: .4rem;
-  color: #7d7d7d;
+  color: #2c2c2c;
   padding: 1.6rem 1.6rem; 
   text-align: center;
 }

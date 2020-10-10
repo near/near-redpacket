@@ -97,7 +97,7 @@ const Drops = (props) => {
     ********************************/
     async function getWalletLink(public_key) {
         const { secretKey } = await getDrop(public_key)
-        return `${window.location.origin}/${secretKey}`
+        return `${window.location.origin}/#/${secretKey}`
     }
     /********************************
     Download keypair
@@ -238,7 +238,7 @@ const Drops = (props) => {
                                 <div className="drop-item-pubkey text-ellipsis text-gray">Public Key: {public_key}</div>
                                 <button className="btn btn-sm btn-primary" onClick={async () => {
                                     await clipboard.writeText(walletLink)
-                                    alert('NEAR 红包 🧧 链接已复制')
+                                    alert('🧧 NEAR Redpacket link copied.')
                                 }}>Share Link</button>
                                 <button className="btn btn-sm btn-link" onClick={() => reclaimDrop(public_key)}>Use Drop</button>
                             </div>)
@@ -247,8 +247,8 @@ const Drops = (props) => {
                         : 
                         <div className="empty">
                             <div className="empty-icon">🧧</div>
-                            <p className="empty-title h5">无可领取红包</p>
-                            <p className="empty-subtitle">点击上方按钮发送新 NEAR 红包。</p>
+                            <p className="empty-title h5">No Available Redpackets</p>
+                            <p className="empty-subtitle">Click the button to create a new NEAR redpacket.</p>
                         </div>
                     }
                 </div>
@@ -266,7 +266,7 @@ const Drops = (props) => {
                                 <div className="drop-item-pubkey text-ellipsis text-gray">Public Key: {public_key}</div>
                                 <button className="btn btn-sm btn-primary" onClick={async () => {
                                     await clipboard.writeText(walletLink)
-                                    alert('NEAR 红包 🧧 链接已复制')
+                                    alert('🧧 NEAR Redpacket link copied.')
                                 }}>Share Link</button>
                                 <button className="btn btn-sm btn-link" onClick={() => removeDrop(public_key)}>Remove Drop</button>
                             </div>)
@@ -275,8 +275,8 @@ const Drops = (props) => {
                         : 
                         <div className="empty">
                             <div className="empty-icon">🧧</div>
-                            <p className="empty-title h5">无已领取的红包</p>
-                            <p className="empty-subtitle">点击上方按钮发送新 NEAR 红包。</p>
+                            <p className="empty-title h5">No Claimed Redpackets</p>
+                            <p className="empty-subtitle">Click the button to create a new NEAR redpacket.</p>
                         </div>
                     }
                 </>

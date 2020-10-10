@@ -116,13 +116,13 @@ class App extends Component {
                 : 
                 <div className="empty">
                     <div className="empty-icon">🧧</div>
-                    <p className="empty-title h5">NEAR 红包</p>
-                    <p className="empty-subtitle">点击按钮登录 NEAR 并可发送红包。</p>
+                    <p className="empty-title h5">NEAR Redpackets</p>
+                    <p className="empty-subtitle">Login and Send NEAR Redpackets.</p>
                     <div className="empty-action">
                       <div className="near-user">
                         <a className="btn" href="#" onClick={this.requestSignIn}>
                           <img className="btn-icon" src={iconUser} alt="NEAR user" height="40" />
-                          <span className="text-ellipsis">Log in with NEAR</span>
+                          <span className="text-ellipsis">Login with NEAR</span>
                         </a>
                       </div>
                     </div>

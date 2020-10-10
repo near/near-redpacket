@@ -3,8 +3,7 @@
   "version": "0.1.0",
   "license": "(MIT AND Apache-2.0)",
   "scripts": {
-    "build": "npm run build:web",
-    "build:web": "parcel build src/index.html --public-url ./",
+    "build": "parcel build src/index.html --public-url ./",
     "deploy": "echo 'redpacket.near.org' > dist/CNAME && gh-pages -d dist",
     "start": "parcel src/index.html",
     "dev": "nodemon --watch assembly -e ts --exec \"npm run start\""
