@@ -56538,10 +56538,15 @@ function getConfig(env) {
     case 'mainnet':
       return {
         networkId: 'default',
-        nodeUrl: 'https://rpc.mainnet.near.org',
-        contractName: 'near',
-        walletUrl: 'https://wallet.near.org',
-        helperUrl: 'https://helper.mainnet.near.org'
+        nodeUrl: 'https://rpc.testnet.near.org',
+        contractName: 'testnet',
+        walletUrl: 'https://wallet.testnet.near.org',
+        helperUrl: 'https://helper.testnet.near.org' // networkId: 'default',
+        // nodeUrl: 'https://rpc.mainnet.near.org',
+        // contractName: 'near',
+        // walletUrl: 'https://wallet.near.org',
+        // helperUrl: 'https://helper.mainnet.near.org',
+
       };
 
     case 'development':
@@ -56711,7 +56716,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64404" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56933" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
