@@ -40,6 +40,14 @@ class Claim extends Component {
         console.log(err)
       }
     }
+
+    // Show toast for WeChat users
+    const userAgent = (navigator.userAgent || navigator.vendor || window.opera).toLowerCase();
+    if (/micromessenger|qq/i.test(userAgent)) {
+      let ele = document.getElementsByClassName("toast-wechat")
+      console.log(ele)
+      ele[0].style.display="block" 
+    }
   }
 
   async checkNearDropBalance(fundingContract, fundingKey) {
@@ -86,7 +94,7 @@ class Claim extends Component {
                 { status ?
                   <div className="h1">{nearTo(amount, 2)}<small>Ⓝ</small></div>
                   :
-                  <div className="h1">已领取</div>
+                  <div className="h2">已领取</div>
                 }
               </div>
               <div className="redpacket-card-footer">
@@ -98,6 +106,10 @@ class Claim extends Component {
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="toast-wechat">
+          推荐在浏览器中打开领取 ↗
         </div>
       </div>
     )
