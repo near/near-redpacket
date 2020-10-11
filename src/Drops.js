@@ -99,19 +99,7 @@ const Drops = (props) => {
         const { secretKey } = await getDrop(public_key)
         return `${window.location.origin}/${secretKey}`
     }
-    /********************************
-    Download keypair
-    ********************************/
-    function downloadFile(fileName, data, type='text/plain') {
-        const a = document.createElement('a')
-        a.style.display = 'none'
-        document.body.appendChild(a)
-        a.href = window.URL.createObjectURL(new Blob([data], { type }))
-        a.setAttribute("download", fileName)
-        a.click()
-        window.URL.revokeObjectURL(a.href)
-        document.body.removeChild(a)
-    }
+
     /********************************
     Get Contract Helper
     ********************************/
@@ -149,7 +137,7 @@ const Drops = (props) => {
         // const downloadKey = window.confirm('Download keypair before funding?')
         // if (downloadKey) {
         //     const { secretKey, public_key: publicKey } = JSON.parse(JSON.stringify(newKeyPair))
-        //     downloadFile(public_key + '.txt', JSON.stringify({ publicKey, secretKey }))
+        //     downloadFile(accountId + '.txt', JSON.stringify({ publicKey, secretKey }))
         // }
 
         newKeyPair.amount = amount

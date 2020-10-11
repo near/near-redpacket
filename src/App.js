@@ -67,6 +67,31 @@ class App extends Component {
     })
   }
 
+  /********************************
+  Download keypair
+  ********************************/
+  downloadFile(fileName, data, type='text/plain') {
+    const a = document.createElement('a')
+    a.style.display = 'none'
+    document.body.appendChild(a)
+    a.href = window.URL.createObjectURL(new Blob([data], { type }))
+    a.setAttribute("download", fileName)
+    a.click()
+    window.URL.revokeObjectURL(a.href)
+    document.body.removeChild(a)
+  }
+
+  downloadJson() {
+    try {
+      const accountId = currentUser.account_id
+      const dropStorageKey = '__drops_' + accountId
+      const data = localStorage.getItem(dropStorageKey) || '[]'
+      this.downloadFile(accountId + '.json', data)
+    } catch(e) {
+      console.warn(e)
+    }
+  }
+
   render() {
     const {
       state,
@@ -94,13 +119,24 @@ class App extends Component {
                       </div>
                       <ul className="menu">
                         <li className="menu-item">
+                          <a href="#" onClick={() => this.downloadJson()}>
+                            Backup NEAR Drops
+                          </a>
+                        </li>
+                        {/* <li className="menu-item">
+                          <a href="#" onClick={() => this.restoreJson()}>
+                            Restore
+                          </a>
+                        </li> */}
+                        <li class="divider"></li>
+                        <li className="menu-item">
                           <a href={window.nearConfig.walletUrl} target="_blank">
-                              NEAR Wallet
+                            NEAR Wallet
                           </a>
                         </li>
                         <li className="menu-item">
-                          <a href="#" onClick={this.requestSignOut}>
-                              Log Out
+                          <a href="#" onClick={() => this.requestSignOut()}>
+                            Log Out
                           </a>
                         </li>
                       </ul>
