@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Switch, Route } from 'react-router-dom';
-import { createHashHistory } from 'history';
+import { createBrowserHistory } from 'history';
 import App from './App';
 import Claim from './Claim';
 import getConfig from './config.js';
 import { getCurrentUser } from './util/near-util';
 import * as nearApi from 'near-api-js';
 
-const history = createHashHistory()
+const history = createBrowserHistory()
 
 // Initializing contract
 async function initContract() {

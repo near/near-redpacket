@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "license": "(MIT AND Apache-2.0)",
   "scripts": {
-    "build": "parcel build src/index.html --public-url ./",
+    "prebuild": "rm -rf dist/ && gulp",
+    "build": "parcel build src/*.html --public-url ./",
+    "predeploy": "yarn build",
     "deploy": "echo 'redpacket.near.org' > dist/CNAME && gh-pages -d dist",
     "start": "parcel src/index.html",
     "dev": "nodemon --watch assembly -e ts --exec \"npm run start\""
