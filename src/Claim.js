@@ -82,13 +82,13 @@ class Claim extends Component {
           </div>
           <div className="near-redpacket-body">
             <div className="redpacket-content">
-              <div className="redpacket-content-title">中秋快乐</div>
+              <div className="redpacket-content-title">感谢您的关注</div>
               <div className="redpacket-content-subtitle">来自 NEAR 团队的祝福</div>
             </div>
             <div className="redpacket-card">
               <img className="redpacket-cover" src={nearcover} alt="红包封面图" />
               <div className="redpacket-card-header">
-                <div className="h2">中秋快乐</div></div>
+                <div className="h2">感谢您的关注</div></div>
               <div className="redpacket-card-body">
                 <div className="">金额</div>
                 { status ?
