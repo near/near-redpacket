@@ -4172,6 +4172,10 @@ body {
   flex: 0 0 1rem;
 }
 
+.near-container .near-dapp-redpacket .near-redpacket-body .redpacket-card .redpacket-card-header .h2 {
+  font-size: 1.4rem;
+}
+
 .near-container .near-dapp-redpacket .near-redpacket-body .redpacket-card .redpacket-card-body {
   align-items: center;
   display: flex;
