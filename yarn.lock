@@ -3225,6 +3225,11 @@ destroy@~1.0.4:
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
   integrity sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
 
+detect-browser-language@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.npm.taobao.org/detect-browser-language/download/detect-browser-language-0.0.2.tgz#3113c2f5951d9b9d6d79cfdaca0965ae75ca0564"
+  integrity sha1-MRPC9ZUdm51tec/aygllrnXKBWQ=
+
 detect-file@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/detect-file/-/detect-file-1.0.0.tgz#f0d66d03672a825cb1b73bdb3fe62310c8e552b7"
@@ -6376,7 +6381,6 @@ near-shell@^0.24.1:
   resolved "https://registry.yarnpkg.com/near-shell/-/near-shell-0.24.9.tgz#709180e9cdbcf4f9ab7dfbec51b1dff1007769c9"
   integrity sha512-z0qCZJNaxoUnFEoYMNUr6TUaaLqNkxhKJciaTIgmMZNHe7IaBOrfDsF2QYuqIEGoPsXs+TN1Z9QRANr1+ffncw==
   dependencies:
-    "@ledgerhq/hw-transport-node-hid" "^5.15.0"
     ascii-table "0.0.9"
     bn.js "^5.1.1"
     bs58 "^4.0.1"
