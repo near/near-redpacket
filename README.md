@@ -8,7 +8,9 @@
 ## Linkdrop example with contract account deployment
 
 ## About the app
-The app allows you to send funds to the Linkdrop contract which will create "Drops". You will have a list of these in local storage and you can remove them at any time. This claims the funds back to your current account.
+The app allows you to give people NEAR accounts that are prefunded with NEAR tokens. This is better than just a vanilla Linkdrop because it allows you to queue up multiple of them and it has a nice UI for the recipient.
+
+The app does this by sending funds to the Linkdrop contract which will create "Drops". You will have a list of these in local storage and you can remove them at any time. This claims the funds back to your current account.
 
 **NOTE:** If you follow the wallet link of a drop, be warned it will not create accounts because your contract is not eligible to create the `.testnet` domain accounts.
 
