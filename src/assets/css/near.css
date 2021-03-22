@@ -3881,6 +3881,12 @@ body {
   width: 100vw;
 }
 
+@media screen and (max-width: 840px) {
+  .near-container {
+    padding: 2rem 1.5rem;
+  }
+}
+
 .near-container .near-dapp {
   background: #fff;
   border: .1rem solid rgba(36, 36, 36, .1);

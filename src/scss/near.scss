@@ -62,6 +62,10 @@ body {
   padding: .5rem;
   width: 100vw;
 
+  @media screen and (max-width: $size-md) {
+    padding: 2rem 1.5rem;
+  }
+
   .near-dapp {
     background: $light-color;
     border: .1rem solid rgba($dark-color, .1);
