@@ -3895,6 +3895,7 @@ body {
   box-shadow: 0 .2rem 1rem rgba(36, 36, 36, .05);
   display: flex;
   flex-direction: column;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
   max-width: 480px;
@@ -4191,6 +4192,10 @@ body {
   flex: 1 1 auto;
   flex-direction: column;
   justify-content: center;
+}
+
+.near-container .near-dapp-redpacket .near-redpacket-body .redpacket-card .redpacket-card-body .h1 {
+  font-weight: 900;
 }
 
 .near-container .near-dapp-redpacket .near-redpacket-body .redpacket-card .redpacket-card-footer {
