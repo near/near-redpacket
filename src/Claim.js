@@ -202,7 +202,7 @@ class Claim extends Component {
                       </button>
                       <button className="btn btn-link btn-block text-ellipsis mt-2" onClick={() => this.requestSignOut()}>
                         {lang == "zh-CN" ? "登出" : "Logout" }
-                        <span className="ml-1">{currentUser.account_id}</span>
+                        <span className="ml-1" title={currentUser.account_id}>{currentUser.account_id}</span>
                       </button>
                     </>
                     : 
