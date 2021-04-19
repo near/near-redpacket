@@ -128,7 +128,7 @@ class App extends Component {
                             Restore
                           </a>
                         </li> */}
-                        <li class="divider"></li>
+                        <li className="divider"></li>
                         <li className="menu-item">
                           <a href={window.nearConfig.walletUrl} target="_blank">
                             NEAR Wallet

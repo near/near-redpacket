@@ -56,7 +56,7 @@ window.nearInitPromise = initContract().then(() => {
                         <App {...props} wallet={window.walletAccount} contract={window.contract} />
                     )} />
                     <Route path="/:key" render={(props) => (
-                        <Claim {...props} near={window.near} />
+                        <Claim {...props} wallet={window.walletAccount} contract={window.contract} near={window.near} />
                     )} />
                 </Switch>
             </Router>

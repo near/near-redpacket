@@ -295,7 +295,7 @@ body {
 }
 
 a {
-  color: #7d7d7d;
+  color: #55390d;
   outline: none;
   text-decoration: none;
 }
@@ -308,12 +308,12 @@ a:focus,
 a:hover,
 a:active,
 a.active {
-  color: #646464;
+  color: #291b06;
   text-decoration: underline;
 }
 
 a:visited {
-  color: #979797;
+  color: #815713;
 }
 
 :focus {
@@ -673,7 +673,7 @@ html:lang(ko),
   background: transparent;
   border-color: transparent;
   box-shadow: none;
-  color: #7d7d7d;
+  color: #55390d;
 }
 
 .btn.btn-link:visited,
@@ -681,7 +681,7 @@ html:lang(ko),
 .btn.btn-link:hover,
 .btn.btn-link:active,
 .btn.btn-link.active {
-  color: #646464;
+  color: #291b06;
 }
 
 .btn.btn-sm {
@@ -4202,6 +4202,7 @@ body {
   align-items: center;
   display: flex;
   flex: 0 0 1rem;
+  flex-direction: column;
   justify-content: center;
   margin-top: 2rem;
 }
