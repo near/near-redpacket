@@ -3874,6 +3874,7 @@ body {
 }
 
 .near-container {
+  align-items: center;
   display: flex;
   height: 100vh;
   overflow: hidden;
@@ -4016,6 +4017,7 @@ body {
   border: .1rem solid #ae201b;
   border-radius: .8rem;
   box-shadow: 0 .1rem 1rem rgba(227, 81, 76, .75);
+  max-height: 35rem;
   max-width: 18.75rem;
   overflow: hidden;
   padding: 0;
@@ -4029,7 +4031,7 @@ body {
   flex: 1 1 65vh;
   height: 65vh;
   position: relative;
-  transform: translateY(-55vh);
+  transform: translateY(-45vh);
   z-index: 999;
 }
 
@@ -4044,7 +4046,7 @@ body {
   height: 2rem;
   left: 50%;
   position: absolute;
-  top: 100%;
+  top: 99%;
   transform: translate(-50%, 0);
   width: 100%;
   z-index: 99;
@@ -4139,6 +4141,7 @@ body {
   flex-direction: column;
   height: 78vh;
   left: 50%;
+  max-height: 30rem;
   padding: 6rem 1.5rem 2rem 1.5rem;
   position: absolute;
   text-align: center;
@@ -4151,14 +4154,14 @@ body {
 .near-container .near-dapp-redpacket .near-redpacket-body .redpacket-card::after {
   border: .1rem solid rgba(36, 36, 36, .05);
   border-radius: .6rem;
+  bottom: .3rem;
   content: "";
   display: block;
   flex: 0 0 4rem;
-  height: calc(78vh - .8rem);
   left: .3rem;
   position: absolute;
+  right: .3rem;
   top: .3rem;
-  width: calc(100% - .6rem);
 }
 
 .near-container .near-dapp-redpacket .near-redpacket-body .redpacket-card .redpacket-cover {
@@ -4263,7 +4266,7 @@ body {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-55vh);
+    transform: translateY(-45vh);
   }
 }
 
@@ -4275,7 +4278,7 @@ body {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-55vh);
+    transform: translateY(-45vh);
   }
 }
 
