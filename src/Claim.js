@@ -123,7 +123,7 @@ class Claim extends Component {
   }
 
   async getWalletLink(secretkey) {
-    return `${window.nearConfig.walletUrl}/create/${window.nearConfig.contractName}/${secretkey}`
+    return `${window.nearConfig.walletUrl}/linkdrop/${window.nearConfig.contractName}/${secretkey}`
   }
 
   async getContract(viewMethods = [], changeMethods = [], secretKey) {
