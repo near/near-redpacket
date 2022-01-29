@@ -557,7 +557,6 @@ html:lang(ko),
 .btn {
   align-items: center;
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   background: #f0f0f0;
   border: .05rem solid #eaeaea;
@@ -814,7 +813,6 @@ legend {
 
 .form-input {
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   background: white;
   background-image: none;
@@ -843,10 +841,6 @@ legend {
 }
 
 .form-input:-ms-input-placeholder {
-  color: #b0b0b0;
-}
-
-.form-input::-ms-input-placeholder {
   color: #b0b0b0;
 }
 
@@ -900,7 +894,6 @@ textarea.form-input.input-sm {
 
 .form-select {
   -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   background: white; 
   border: .05rem solid #e0e0e0;
@@ -963,6 +956,7 @@ textarea.form-input.input-sm {
   margin: 0 .25rem;
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   width: .8rem;
   z-index: 2;
@@ -1074,6 +1068,7 @@ textarea.form-input.input-sm {
   margin-top: -6px;
   position: absolute;
   top: 50%;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   width: 6px;
 }
@@ -1107,6 +1102,7 @@ textarea.form-input.input-sm {
   left: 50%;
   position: absolute;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   width: 6px;
 }
@@ -2004,6 +2000,7 @@ video.video-responsive::before {
 
 .accordion input:checked ~ .accordion-header .icon,
 .accordion[open] .accordion-header .icon {
+  -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
@@ -2018,7 +2015,9 @@ video.video-responsive::before {
 }
 
 .accordion .accordion-header .icon {
+  transition: -webkit-transform .25s;
   transition: transform .25s;
+  transition: transform .25s, -webkit-transform .25s;
 }
 
 .accordion .accordion-body {
@@ -2087,6 +2086,7 @@ summary.accordion-header::-webkit-details-marker {
   padding: .1rem;
   position: absolute;
   right: 14.64%;
+  -webkit-transform: translate(50%, 50%);
   transform: translate(50%, 50%);
   width: 50%;
   z-index: 2;
@@ -2118,6 +2118,7 @@ summary.accordion-header::-webkit-details-marker {
   left: 50%;
   position: absolute;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 1;
 }
@@ -2136,6 +2137,7 @@ summary.accordion-header::-webkit-details-marker {
   color: #fff;
   content: attr(data-badge);
   display: inline-block;
+  -webkit-transform: translate(-.05rem, -.5rem);
   transform: translate(-.05rem, -.5rem);
 }
 
@@ -2161,6 +2163,7 @@ summary.accordion-header::-webkit-details-marker {
   position: absolute;
   right: 0;
   top: 0;
+  -webkit-transform: translate(50%, -50%);
   transform: translate(50%, -50%);
 }
 
@@ -2168,6 +2171,7 @@ summary.accordion-header::-webkit-details-marker {
   position: absolute;
   right: 14.64%;
   top: 14.64%;
+  -webkit-transform: translate(50%, -50%);
   transform: translate(50%, -50%);
   z-index: 100;
 }
@@ -2262,6 +2266,7 @@ summary.accordion-header::-webkit-details-marker {
   position: absolute;
   right: 0;
   top: 50%;
+  -webkit-transform: translate(50%, -50%);
   transform: translate(50%, -50%);
   width: .6rem;
 }
@@ -2343,6 +2348,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .chip .btn-clear {
   border-radius: 50%;
+  -webkit-transform: scale(.75);
   transform: scale(.75);
 }
 
@@ -2647,6 +2653,7 @@ summary.accordion-header::-webkit-details-marker {
   margin: 0;
   min-width: 180px;
   padding: .4rem;
+  -webkit-transform: translateY(.2rem);
   transform: translateY(.2rem);
   z-index: 300;
 }
@@ -2917,8 +2924,11 @@ summary.accordion-header::-webkit-details-marker {
   padding: .4rem;
   position: absolute;
   top: 0;
+  -webkit-transform: translate(-50%, -50%) scale(0);
   transform: translate(-50%, -50%) scale(0);
+  transition: -webkit-transform .2s;
   transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
   width: 320px;
   z-index: 300;
 }
@@ -2927,6 +2937,7 @@ summary.accordion-header::-webkit-details-marker {
 .popover:hover .popover-container {
   display: block;
   opacity: 1;
+  -webkit-transform: translate(-50%, -100%) scale(1);
   transform: translate(-50%, -100%) scale(1);
 }
 
@@ -2937,6 +2948,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .popover.popover-right *:focus + .popover-container,
 .popover.popover-right:hover .popover-container {
+  -webkit-transform: translate(0, -50%) scale(1);
   transform: translate(0, -50%) scale(1);
 }
 
@@ -2947,6 +2959,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .popover.popover-bottom *:focus + .popover-container,
 .popover.popover-bottom:hover .popover-container {
+  -webkit-transform: translate(-50%, 0) scale(1);
   transform: translate(-50%, 0) scale(1);
 }
 
@@ -2957,6 +2970,7 @@ summary.accordion-header::-webkit-details-marker {
 
 .popover.popover-left *:focus + .popover-container,
 .popover.popover-left:hover .popover-container {
+  -webkit-transform: translate(-100%, -50%) scale(1);
   transform: translate(-100%, -50%) scale(1);
 }
 
@@ -3008,6 +3022,7 @@ summary.accordion-header::-webkit-details-marker {
   left: 50%;
   position: absolute;
   top: .2rem;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   width: .6rem;
   z-index: 1;
@@ -3178,8 +3193,11 @@ summary.accordion-header::-webkit-details-marker {
   pointer-events: none;
   position: absolute;
   text-overflow: ellipsis;
+  -webkit-transform: translate(-50%, .4rem);
   transform: translate(-50%, .4rem);
+  transition: opacity .2s, -webkit-transform .2s;
   transition: opacity .2s, transform .2s;
+  transition: opacity .2s, transform .2s, -webkit-transform .2s;
   white-space: pre;
   z-index: 300;
 }
@@ -3187,6 +3205,7 @@ summary.accordion-header::-webkit-details-marker {
 .tooltip:focus::after,
 .tooltip:hover::after {
   opacity: 1;
+  -webkit-transform: translate(-50%, -.2rem);
   transform: translate(-50%, -.2rem);
 }
 
@@ -3198,22 +3217,26 @@ summary.accordion-header::-webkit-details-marker {
 .tooltip.tooltip-right::after {
   bottom: 50%;
   left: 100%;
+  -webkit-transform: translate(-.2rem, 50%);
   transform: translate(-.2rem, 50%);
 }
 
 .tooltip.tooltip-right:focus::after,
 .tooltip.tooltip-right:hover::after {
+  -webkit-transform: translate(.2rem, 50%);
   transform: translate(.2rem, 50%);
 }
 
 .tooltip.tooltip-bottom::after {
   bottom: auto;
   top: 100%;
+  -webkit-transform: translate(-50%, -.4rem);
   transform: translate(-50%, -.4rem);
 }
 
 .tooltip.tooltip-bottom:focus::after,
 .tooltip.tooltip-bottom:hover::after {
+  -webkit-transform: translate(-50%, .2rem);
   transform: translate(-50%, .2rem);
 }
 
@@ -3221,28 +3244,34 @@ summary.accordion-header::-webkit-details-marker {
   bottom: 50%;
   left: auto;
   right: 100%;
+  -webkit-transform: translate(.4rem, 50%);
   transform: translate(.4rem, 50%);
 }
 
 .tooltip.tooltip-left:focus::after,
 .tooltip.tooltip-left:hover::after {
+  -webkit-transform: translate(-.2rem, 50%);
   transform: translate(-.2rem, 50%);
 }
 
 @-webkit-keyframes loading {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
 @keyframes loading {
   0% {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -3250,10 +3279,12 @@ summary.accordion-header::-webkit-details-marker {
 @-webkit-keyframes slide-down {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-1.6rem);
     transform: translateY(-1.6rem);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -3261,10 +3292,12 @@ summary.accordion-header::-webkit-details-marker {
 @keyframes slide-down {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(-1.6rem);
     transform: translateY(-1.6rem);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
 }
@@ -3497,6 +3530,7 @@ a.text-error:visited {
   display: inline-block;
   font-size: .7rem;
   padding: 0 .4rem;
+  -webkit-transform: translateY(-.65rem);
   transform: translateY(-.65rem);
 }
 
@@ -3523,6 +3557,7 @@ a.text-error:visited {
   left: 50%;
   position: absolute;
   top: .4rem;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -3531,6 +3566,7 @@ a.text-error:visited {
   padding: .2rem 0;
   position: absolute;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
