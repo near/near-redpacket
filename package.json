@@ -37,7 +37,7 @@
     "near-api-js": "^0.29.1",
     "near-bindgen-as": "^1.2.3",
     "near-sdk-bindgen": "^2.0.0",
-    "node-sass": "^7.0.1",
+    "node-sass": "^8.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
