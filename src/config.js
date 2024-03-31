@@ -9,7 +9,7 @@ function getConfig(env) {
             networkId: 'default',
             nodeUrl: 'https://rpc.mainnet.near.org',
             contractName: 'near',
-            walletUrl: 'https://wallet.near.org',
+            walletUrl: 'https://app.mynearwallet.com/',
             helperUrl: 'https://helper.mainnet.near.org',
         };
     case 'development':
@@ -18,7 +18,7 @@ function getConfig(env) {
             networkId: 'default',
             nodeUrl: 'https://rpc.testnet.near.org',
             contractName: 'testnet',
-            walletUrl: 'https://wallet.testnet.near.org',
+            walletUrl: 'https://testnet.mynearwallet.com/',
             helperUrl: 'https://helper.testnet.near.org',
         };
     case 'betanet':
