@@ -41,7 +41,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "regenerator-runtime": "^0.13.7"
+    "regenerator-runtime": "^0.14.0"
   },
   "eslintConfig": {
     "extends": "react-app"
